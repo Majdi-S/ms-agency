@@ -7,7 +7,7 @@
 <meta name="description" content="MS Agency crée et gère vos publicités Facebook & Instagram pour que des particuliers de votre zone vous demandent un devis. Un seul artisan accompagné par zone.">
 <meta property="og:title" content="MS Agency : des demandes de devis régulières pour les artisans">
 <meta property="og:description" content="Publicités Facebook & Instagram clé en main. Un seul artisan accompagné par zone.">
-<meta property="og:image" content="demo.jpg">
+<meta property="og:image" content="https://majdi-s.github.io/ms-agency/demo.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230B1F44'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='900' font-size='26' fill='white' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -260,6 +260,8 @@ const FORM_ENDPOINT = 'https://formsubmit.co/ajax/95ae9e5b6eb69b5094aa38d6a9240e
 const CALENDAR_EMBED_URL = '';
 const SLOTS = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
 const NB_DAYS = 10;
+// Jours fériés (AAAA-MM-JJ) : pas de créneau proposé ces jours-là.
+const FERIES = ['2026-11-01','2026-11-11','2026-12-25','2027-01-01','2027-03-29','2027-05-01','2027-05-06','2027-05-08','2027-05-17','2027-07-14','2027-08-15','2027-11-01','2027-11-11','2027-12-25'];
 
 document.getElementById('y').textContent = new Date().getFullYear();
 
@@ -297,7 +299,8 @@ if (CALENDAR_EMBED_URL) {
   let day = null, slot = null;
   const now = new Date(), days = [];
   for (let d = new Date(now); days.length < NB_DAYS; d.setDate(d.getDate() + 1)) {
-    const wd = d.getDay(); if (wd === 0 || wd === 6) continue;
+    const wd = d.getDay(), iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    if (wd === 0 || wd === 6 || FERIES.includes(iso)) continue;
     days.push(new Date(d.getFullYear(), d.getMonth(), d.getDate()));
   }
   function slotOk(d, s) { const [h, m] = s.split(':'); const t = new Date(d); t.setHours(+h, +m); return t - now > 2 * 3600e3; }
