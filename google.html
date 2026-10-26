@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Local Services pour artisans · MS Agency</title>
+<meta name="description" content="MS Agency vous place en haut de Google avec les annonces Local Services : vous ne payez Google que quand un client vous contacte. Inscription, vérification, avis et réglages pris en charge.">
+<meta property="og:title" content="En haut de Google, payé au client : Google Local Services pour artisans">
+<meta property="og:description" content="Vous ne payez Google que quand un client vous appelle. On s'occupe de tout. Un seul artisan par zone.">
+<link rel="canonical" href="https://ms-agency.fr/google.html">
+<meta property="og:url" content="https://ms-agency.fr/google.html">
+<meta property="og:image" content="https://ms-agency.fr/demo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230B1F44'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='900' font-size='26' fill='white' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07112A;--bg2:#0B1A3D;--card:#0F2149;--line:#1E3363;--fg:#F4F6FA;--mute:#9AA7C2;--acc:#22D3A6;--acc2:#16B08A;--red:#FF6B5E;--r:22px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:'Inter Tight',system-ui,-apple-system,Segoe UI,Arial,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h1{font-size:clamp(40px,6vw,72px);line-height:1.02;font-weight:900;letter-spacing:-.03em}
+h2{font-size:clamp(32px,4.4vw,52px);line-height:1.06;font-weight:850;font-weight:800;letter-spacing:-.025em;margin-bottom:18px}
+h3{font-size:22px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+.lead{font-size:clamp(18px,2vw,21px);color:#C9D2E6;max-width:640px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:16px}
+.acc{color:var(--acc)}.mute{color:var(--mute)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#03201A;font-weight:800;font-size:17px;padding:16px 26px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:#3BE3B7;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
+.btn.ghost:hover{border-color:var(--acc)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(7,17,42,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,51,99,.6)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.logo i{width:38px;height:38px;border-radius:50%;background:linear-gradient(#123070,#0A1B44);display:grid;place-items:center;font-style:normal;font-size:14px;border:1px solid var(--line)}
+.logo b{color:var(--acc);font-weight:800;letter-spacing:.18em;font-size:13px}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{text-decoration:none;color:var(--mute);font-weight:600;font-size:15px}
+.navlinks a:hover{color:var(--fg)}
+.navlinks .btn{color:#03201A;padding:11px 20px;font-size:15px}
+@media(max-width:820px){.navlinks a:not(.btn){display:none}}
+/* hero */
+.hero{padding:80px 0 96px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-200px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(closest-side,rgba(34,211,166,.16),transparent);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.hero .lead{margin:24px 0 34px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.pill{font-size:14px;font-weight:600;color:#C9D2E6;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.phone{justify-self:center;width:min(300px,80vw);aspect-ratio:9/16.6;border-radius:44px;background:#000;padding:10px;border:1px solid #2a3a63;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 6px #0d1a38}
+.phone video{width:100%;height:100%;object-fit:cover;border-radius:34px;display:block;background:#0B0B0C}
+.phone-cap{text-align:center;font-size:13px;color:var(--mute);margin-top:14px}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.phone{width:240px}}
+/* grids */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card p{color:#C2CBE0;font-size:16.5px}
+.ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(34,211,166,.12);margin-bottom:18px}
+.ic svg{width:24px;height:24px;stroke:var(--acc);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic.red{background:rgba(255,107,94,.12)}.ic.red svg{stroke:var(--red)}
+.head{margin-bottom:44px}
+.alt{background:var(--bg2)}
+/* steps */
+.step{position:relative}
+.step .n{font-size:64px;font-weight:900;line-height:1;color:var(--acc);letter-spacing:-.04em;margin-bottom:14px}
+/* do / dont */
+.list{list-style:none;display:grid;gap:14px}
+.list li{display:flex;gap:12px;color:#D6DDEC;font-size:17px}
+.list li::before{content:"✓";color:var(--acc);font-weight:900;flex:none}
+.list.no li::before{content:"✕";color:var(--red)}
+/* niches */
+.niche{display:flex;align-items:center;gap:16px}
+.niche .ic{margin:0;flex:none}
+.niche h3{margin:0;font-size:19px}
+/* excl */
+.excl{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;background:linear-gradient(135deg,#0F2A5C,#0B1A3D);border:1px solid var(--line);border-radius:28px;padding:48px}
+.zone{width:200px;height:200px;border-radius:50%;border:3px solid var(--acc);background:rgba(34,211,166,.1);display:grid;place-items:center;position:relative}
+.zone::after{content:"";width:46px;height:46px;border-radius:50% 50% 50% 0;transform:rotate(-45deg) translate(6px,-6px);background:var(--acc)}
+@media(max-width:760px){.excl{grid-template-columns:1fr;padding:32px}.zone{width:150px;height:150px}}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--acc);font-size:26px;line-height:1;font-weight:500;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:#C2CBE0;margin-top:12px;max-width:760px}
+/* booking + forms */
+.book{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.book>*{min-width:0}
+@media(max-width:900px){.book{grid-template-columns:1fr}}
+.days{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.day,.slot{border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:14px;cursor:pointer;font-family:inherit;transition:border-color .15s,background .15s}
+.day{flex:none;min-width:76px;padding:12px 8px;text-align:center}
+.day small{display:block;color:var(--mute);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.day b{display:block;font-size:22px;font-weight:800}
+.day:hover,.slot:hover{border-color:var(--acc)}
+.day[aria-pressed=true],.slot[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#03201A}
+.day[aria-pressed=true] small{color:#03201A}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.slot{padding:13px 0;font-weight:700;font-size:16px}
+.label{font-size:14px;font-weight:700;color:var(--mute);margin:22px 0 10px;text-transform:uppercase;letter-spacing:.08em}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){form .row{grid-template-columns:1fr}}
+input,select,textarea{width:100%;background:#0A1838;border:1px solid var(--line);color:var(--fg);border-radius:12px;padding:14px 16px;font:inherit;font-size:16px;margin-bottom:12px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+textarea{min-height:120px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+.chosen{font-weight:700;color:var(--acc);min-height:26px;margin:4px 0 12px}
+.note{font-size:13px;color:var(--mute);margin-top:6px}
+.ok{display:none;background:rgba(34,211,166,.12);border:1px solid var(--acc);border-radius:14px;padding:18px;font-weight:600;margin-top:12px}
+.err{display:none;background:rgba(255,107,94,.12);border:1px solid var(--red);border-radius:14px;padding:18px;font-weight:600;margin-top:12px}
+iframe.cal{width:100%;height:640px;border:0;border-radius:var(--r);background:#fff}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--mute)}
+
+.serp{background:#fff;color:#202124;border-radius:18px;padding:18px;font-family:Arial,sans-serif;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.serp .q{border:1px solid #dfe1e5;border-radius:999px;padding:9px 16px;font-size:14px;margin-bottom:14px}
+.serp .lbl{font-size:12px;color:#5f6368;margin-bottom:8px}
+.serp .ad{border:1px solid #e3e6ea;border-radius:12px;padding:12px 14px;margin-bottom:8px}
+.serp .ad.me{border:2px solid #1a73e8;background:#f3f8ff}
+.serp .nm{font-weight:700;font-size:15px}
+.serp .bd{font-size:12px;color:#188038;font-weight:700}
+.serp .mt{font-size:12.5px;color:#5f6368}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="index.html"><i>MS</i>MS <b>AGENCY</b></a>
+  <div class="navlinks">
+    <a href="#comment">Comment ça marche</a><a href="#ce-quon-fait">Ce qu'on fait</a><a href="#faq">FAQ</a><a href="index.html">Pub Facebook</a>
+    <a class="btn" href="index.html#reserver">Réserver un appel</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">Google Local Services</span>
+    <h1>En haut de Google.<br><span class="acc">Payé au client</span>, pas au clic.</h1>
+    <p class="lead">Quand un particulier de votre zone cherche « pompe à chaleur » ou « climatisation » sur Google, vous apparaissez tout en haut, avec le badge Google. Vous ne payez Google que quand il vous appelle ou vous écrit. On s'occupe de tout le reste.</p>
+    <div class="ctas"><a class="btn" href="index.html#reserver">Réserver un appel de 15 min</a><a class="btn ghost" href="#comment">Comment ça marche</a></div>
+    <div class="pills"><span class="pill">Paiement au contact</span><span class="pill">Badge de confiance Google</span><span class="pill">1 seul artisan par zone</span></div>
+  </div>
+  <div class="serp" aria-label="Exemple de résultat Google">
+    <div class="q">pompe à chaleur près de chez moi</div>
+    <div class="lbl">Sponsorisé · Annonces Local Services</div>
+    <div class="ad me"><div class="nm">Votre entreprise</div><div class="bd">✓ Badge Google</div><div class="mt">★ 4,9 · Installateur PAC · Ouvert</div></div>
+    <div class="ad"><div class="nm">Concurrent A</div><div class="mt">★ 4,6 · Chauffagiste</div></div>
+    <div class="ad"><div class="nm">Concurrent B</div><div class="mt">★ 4,4 · Climatisation</div></div>
+  </div>
+</div></header>
+
+<section id="comment" class="alt"><div class="wrap">
+  <div class="head"><span class="eyebrow">Comment ça marche</span><h2>Trois étapes, on gère les trois.</h2></div>
+  <div class="grid g3">
+    <div class="card step"><div class="n">1</div><h3>Vérification Google</h3><p>On prépare votre dossier. Vous envoyez vos papiers (Kbis, SIRET, assurance) et Google vérifie votre entreprise gratuitement.</p></div>
+    <div class="card step"><div class="n">2</div><h3>Fiche et avis</h3><p>On optimise votre fiche Google (photos, services, horaires) et on lance une campagne d'avis auprès de vos anciens clients.</p></div>
+    <div class="card step"><div class="n">3</div><h3>Les clients appellent</h3><p>Vos annonces s'affichent sur votre zone. Vous fixez un budget mensuel et ne payez Google qu'au contact. On suit chaque prospect avec vous.</p></div>
+  </div>
+</div></section>
+
+<section id="ce-quon-fait"><div class="wrap">
+  <div class="head"><span class="eyebrow">Ce qu'on fait</span><h2>Vous posez des PAC.<br>On gère Google.</h2></div>
+  <div class="grid g2">
+    <div class="card"><h3>On s'occupe de</h3><ul class="list">
+      <li>L'inscription et le dossier de vérification Google</li>
+      <li>Votre fiche Google : photos, services, horaires</li>
+      <li>La campagne d'avis auprès de vos clients</li>
+      <li>Les réglages : zones, types de chantiers, budget</li>
+      <li>Le suivi mensuel des prospects et la contestation des mauvais</li>
+    </ul></div>
+    <div class="card"><h3>Ce qu'on ne fait pas</h3><ul class="list no">
+      <li>Inventer ou acheter des avis</li>
+      <li>Prendre une marge sur votre budget Google : vous le payez directement à Google</li>
+      <li>Accompagner un concurrent dans votre zone</li>
+      <li>Vous promettre un nombre de clients</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap" style="max-width:860px">
+  <div class="head"><span class="eyebrow">FAQ</span><h2>Vos questions</h2></div>
+  <details><summary>Je paie quoi, exactement ?</summary><p>Deux choses séparées : notre accompagnement, et votre budget Google. Le budget Google, vous le réglez directement à Google, uniquement quand un client vous contacte via l'annonce. Vous fixez un plafond mensuel et vous le changez quand vous voulez.</p></details>
+  <details><summary>Quels métiers sont éligibles ?</summary><p>En France, Google ouvre ces annonces notamment au chauffage et à la climatisation (CVC), à la menuiserie, aux fenêtres, à la plomberie et à l'électricité. On vérifie votre éligibilité pendant l'appel.</p></details>
+  <details><summary>Qu'est-ce que Google vérifie ?</summary><p>Votre entreprise : immatriculation, SIRET, assurance, et selon le métier d'autres documents. La vérification est gratuite. On prépare le dossier avec vous.</p></details>
+  <details><summary>Et si un appel n'a rien à voir avec mon métier ?</summary><p>On évalue chaque prospect dans votre compte et on conteste ceux qui ne correspondent pas. Les bons réglages de zones et de types de chantiers évitent la plupart de ces appels.</p></details>
+  <details><summary>Je peux faire ça avec la pub Facebook ?</summary><p>Oui. Google capte les gens qui cherchent déjà un installateur ; la pub Facebook crée la demande chez ceux qui n'ont pas encore cherché. <a href="index.html" class="acc">Voir notre offre Facebook &amp; Instagram</a>.</p></details>
+</div></section>
+
+<section><div class="wrap">
+  <div class="excl"><div><span class="eyebrow">Un seul artisan par zone</span><h2>On ne vous met pas en concurrence avec nos propres clients.</h2><p class="lead" style="margin-bottom:26px">15 minutes au téléphone : on regarde où vous apparaissez aujourd'hui sur Google dans votre secteur, et si c'est pertinent pour vous.</p><a class="btn" href="index.html#reserver">Réserver un appel</a></div><div class="zone"></div></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© <span id="y"></span> MS Agency · Google Local Services &amp; publicité Facebook pour artisans</div>
+  <div><a href="index.html">Accueil</a> · <a href="mentions-legales.html">Mentions légales &amp; confidentialité</a></div>
+</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body></html>
