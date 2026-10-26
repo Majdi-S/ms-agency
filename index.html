@@ -270,7 +270,7 @@ document.getElementById('y').textContent = new Date().getFullYear();
 
 async function send(data, subject) {
   const body = { access_key: WEB3FORMS_KEY, subject, from_name: 'Site MS Agency', ...data };
-  const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout(20000) });
+  const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout ? AbortSignal.timeout(20000) : undefined });
   const j = await r.json().catch(() => ({}));
   if (!r.ok || j.success !== true) throw new Error(j.message || r.status);
 }
