@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MS Agency : demandes de devis pour artisans du bâtiment</title>
+<meta name="description" content="MS Agency crée et gère vos publicités Facebook & Instagram pour que des particuliers de votre zone vous demandent un devis. Un seul artisan accompagné par zone.">
+<meta property="og:title" content="MS Agency : des demandes de devis régulières pour les artisans">
+<meta property="og:description" content="Publicités Facebook & Instagram clé en main. Un seul artisan accompagné par zone.">
+<meta property="og:image" content="demo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230B1F44'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='900' font-size='26' fill='white' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07112A;--bg2:#0B1A3D;--card:#0F2149;--line:#1E3363;--fg:#F4F6FA;--mute:#9AA7C2;--acc:#22D3A6;--acc2:#16B08A;--red:#FF6B5E;--r:22px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:'Inter Tight',system-ui,-apple-system,Segoe UI,Arial,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h1{font-size:clamp(40px,6vw,72px);line-height:1.02;font-weight:900;letter-spacing:-.03em}
+h2{font-size:clamp(32px,4.4vw,52px);line-height:1.06;font-weight:850;font-weight:800;letter-spacing:-.025em;margin-bottom:18px}
+h3{font-size:22px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+.lead{font-size:clamp(18px,2vw,21px);color:#C9D2E6;max-width:640px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:16px}
+.acc{color:var(--acc)}.mute{color:var(--mute)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#03201A;font-weight:800;font-size:17px;padding:16px 26px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:#3BE3B7;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
+.btn.ghost:hover{border-color:var(--acc)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(7,17,42,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,51,99,.6)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.logo i{width:38px;height:38px;border-radius:50%;background:linear-gradient(#123070,#0A1B44);display:grid;place-items:center;font-style:normal;font-size:14px;border:1px solid var(--line)}
+.logo b{color:var(--acc);font-weight:800;letter-spacing:.18em;font-size:13px}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{text-decoration:none;color:var(--mute);font-weight:600;font-size:15px}
+.navlinks a:hover{color:var(--fg)}
+.navlinks .btn{color:#03201A;padding:11px 20px;font-size:15px}
+@media(max-width:820px){.navlinks a:not(.btn){display:none}}
+/* hero */
+.hero{padding:80px 0 96px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-200px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(closest-side,rgba(34,211,166,.16),transparent);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.hero .lead{margin:24px 0 34px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.pill{font-size:14px;font-weight:600;color:#C9D2E6;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.phone{justify-self:center;width:min(300px,80vw);aspect-ratio:9/16.6;border-radius:44px;background:#000;padding:10px;border:1px solid #2a3a63;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 6px #0d1a38}
+.phone video{width:100%;height:100%;object-fit:cover;border-radius:34px;display:block;background:#0B0B0C}
+.phone-cap{text-align:center;font-size:13px;color:var(--mute);margin-top:14px}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.phone{width:240px}}
+/* grids */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card p{color:#C2CBE0;font-size:16.5px}
+.ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(34,211,166,.12);margin-bottom:18px}
+.ic svg{width:24px;height:24px;stroke:var(--acc);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic.red{background:rgba(255,107,94,.12)}.ic.red svg{stroke:var(--red)}
+.head{margin-bottom:44px}
+.alt{background:var(--bg2)}
+/* steps */
+.step{position:relative}
+.step .n{font-size:64px;font-weight:900;line-height:1;color:var(--acc);letter-spacing:-.04em;margin-bottom:14px}
+/* do / dont */
+.list{list-style:none;display:grid;gap:14px}
+.list li{display:flex;gap:12px;color:#D6DDEC;font-size:17px}
+.list li::before{content:"✓";color:var(--acc);font-weight:900;flex:none}
+.list.no li::before{content:"✕";color:var(--red)}
+/* niches */
+.niche{display:flex;align-items:center;gap:16px}
+.niche .ic{margin:0;flex:none}
+.niche h3{margin:0;font-size:19px}
+/* excl */
+.excl{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;background:linear-gradient(135deg,#0F2A5C,#0B1A3D);border:1px solid var(--line);border-radius:28px;padding:48px}
+.zone{width:200px;height:200px;border-radius:50%;border:3px solid var(--acc);background:rgba(34,211,166,.1);display:grid;place-items:center;position:relative}
+.zone::after{content:"";width:46px;height:46px;border-radius:50% 50% 50% 0;transform:rotate(-45deg) translate(6px,-6px);background:var(--acc)}
+@media(max-width:760px){.excl{grid-template-columns:1fr;padding:32px}.zone{width:150px;height:150px}}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--acc);font-size:26px;line-height:1;font-weight:500;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:#C2CBE0;margin-top:12px;max-width:760px}
+/* booking + forms */
+.book{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.book>*{min-width:0}
+@media(max-width:900px){.book{grid-template-columns:1fr}}
+.days{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.day,.slot{border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:14px;cursor:pointer;font-family:inherit;transition:border-color .15s,background .15s}
+.day{flex:none;min-width:76px;padding:12px 8px;text-align:center}
+.day small{display:block;color:var(--mute);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.day b{display:block;font-size:22px;font-weight:800}
+.day:hover,.slot:hover{border-color:var(--acc)}
+.day[aria-pressed=true],.slot[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#03201A}
+.day[aria-pressed=true] small{color:#03201A}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.slot{padding:13px 0;font-weight:700;font-size:16px}
+.label{font-size:14px;font-weight:700;color:var(--mute);margin:22px 0 10px;text-transform:uppercase;letter-spacing:.08em}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){form .row{grid-template-columns:1fr}}
+input,select,textarea{width:100%;background:#0A1838;border:1px solid var(--line);color:var(--fg);border-radius:12px;padding:14px 16px;font:inherit;font-size:16px;margin-bottom:12px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+textarea{min-height:120px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+.chosen{font-weight:700;color:var(--acc);min-height:26px;margin:4px 0 12px}
+.note{font-size:13px;color:var(--mute);margin-top:6px}
+.ok{display:none;background:rgba(34,211,166,.12);border:1px solid var(--acc);border-radius:14px;padding:18px;font-weight:600;margin-top:12px}
+.err{display:none;background:rgba(255,107,94,.12);border:1px solid var(--red);border-radius:14px;padding:18px;font-weight:600;margin-top:12px}
+iframe.cal{width:100%;height:640px;border:0;border-radius:var(--r);background:#fff}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--mute)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#"><i>MS</i>MS <b>AGENCY</b></a>
+  <div class="navlinks">
+    <a href="#methode">Méthode</a><a href="#pour-qui">Pour qui</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    <a class="btn" href="#reserver">Réserver un appel</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">Acquisition client pour artisans</span>
+    <h1>Des demandes de devis <span class="acc">régulières</span>, sans dépendre du bouche-à-oreille.</h1>
+    <p class="lead">On crée et on gère vos publicités Facebook &amp; Instagram pour que des particuliers de votre zone vous demandent un devis. Vous, vous rappelez les clients.</p>
+    <div class="ctas">
+      <a class="btn" href="#reserver">Réserver un appel de 30 min →</a>
+      <a class="btn ghost" href="#methode">Comment ça marche</a>
+    </div>
+    <div class="pills"><span class="pill">Un seul artisan par zone</span><span class="pill">Demandes envoyées à vous seul</span><span class="pill">Pubs créées par nous</span></div>
+  </div>
+  <div>
+    <div class="phone"><video src="demo.mp4" poster="demo.jpg" autoplay muted loop playsinline></video></div>
+    <p class="phone-cap">Exemple de pub vidéo créée par MS Agency</p>
+  </div>
+</div></header>
+
+<section class="alt" id="probleme"><div class="wrap">
+  <div class="head"><span class="eyebrow">Le problème</span><h2>Le bouche-à-oreille, ça ne se pilote pas.</h2></div>
+  <div class="grid g4">
+    <div class="card"><div class="ic red"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/></svg></div><h3>Activité irrégulière</h3><p>Des mois pleins, puis des périodes creuses que vous ne voyez pas venir.</p></div>
+    <div class="card"><div class="ic red"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><h3>Charges fixes</h3><p>Salariés, camions, local : eux tombent tous les mois, pleins ou creux.</p></div>
+    <div class="card"><div class="ic red"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 15c3 0 6 1.5 6 4"/></svg></div><h3>Contacts partagés</h3><p>Une demande achetée sur une plateforme peut être envoyée à plusieurs installateurs. Le moins cher signe.</p></div>
+    <div class="card"><div class="ic red"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Pas le temps</h3><p>Faire de la pub soi-même demande du temps et des compétences que le chantier ne laisse pas.</p></div>
+  </div>
+</div></section>
+
+<section id="methode"><div class="wrap">
+  <div class="head"><span class="eyebrow">La méthode</span><h2>Un système d'acquisition clé en main.</h2><p class="lead">Vous gardez votre métier. On s'occupe de faire venir les demandes.</p></div>
+  <div class="grid g3">
+    <div class="card step"><div class="n">01</div><h3>Appel de 30 min</h3><p>On regarde votre zone, vos chantiers et vos objectifs, et on vous dit honnêtement si c'est pertinent pour vous.</p></div>
+    <div class="card step"><div class="n">02</div><h3>On lance vos campagnes</h3><p>Pubs vidéo, accroches, ciblage local sur votre zone d'intervention, formulaire de pré-qualification. On crée tout.</p></div>
+    <div class="card step"><div class="n">03</div><h3>Vous recevez les demandes</h3><p>Des particuliers avec un projet dans votre zone, envoyés directement à vous. On optimise et on vous fait un reporting.</p></div>
+  </div>
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card"><h3 style="margin-bottom:18px">Ce qu'on fait</h3><ul class="list">
+      <li>Campagnes Meta Ads (Facebook &amp; Instagram) clé en main</li>
+      <li>Création des pubs : vidéos, accroches, visuels</li>
+      <li>Formulaire de pré-qualification des demandes</li>
+      <li>Optimisation continue, reporting et suivi</li>
+    </ul></div>
+    <div class="card"><h3 style="margin-bottom:18px">Ce qu'on ne fait pas</h3><ul class="list no">
+      <li>Revendre vos demandes à d'autres artisans</li>
+      <li>Travailler avec vos concurrents locaux</li>
+      <li>Community management et publications</li>
+      <li>Site internet, SEO, Google Ads</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section class="alt" id="pour-qui"><div class="wrap">
+  <div class="head"><span class="eyebrow">Pour qui</span><h2>Les artisans qui installent chez les particuliers.</h2><p class="lead">Gérants d'entreprises à taille humaine : artisans, TPE et PME.</p></div>
+  <div class="grid g4">
+    <div class="card niche"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 7l14.2 10M4.9 17L19.1 7"/></svg></div><h3>Climatisation &amp; PAC</h3></div>
+    <div class="card niche"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10h18M5 10v7a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-7M9 6c0-1.5 1-2 1-3M14 6c0-1.5 1-2 1-3"/></svg></div><h3>Cuisinistes</h3></div>
+    <div class="card niche"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></svg></div><h3>Menuiserie &amp; fenêtres</h3></div>
+    <div class="card niche"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><h3>Autres artisans</h3></div>
+  </div>
+  <div class="excl" style="margin-top:48px">
+    <div><span class="eyebrow">Exclusivité</span><h2>Un seul artisan accompagné par zone.</h2><p class="lead">On ne travaille jamais avec deux concurrents sur le même secteur. Les demandes générées dans votre zone sont pour vous.</p><a class="btn" href="#reserver" style="margin-top:26px">Vérifier si ma zone est libre →</a></div>
+    <div class="zone"></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:880px">
+  <div class="head"><span class="eyebrow">FAQ</span><h2>Questions fréquentes</h2></div>
+  <details><summary>Combien ça coûte ?</summary><p>Ça dépend de votre zone et de vos objectifs. C'est justement ce qu'on regarde pendant l'appel de 30 minutes, avant tout engagement.</p></details>
+  <details><summary>Les demandes sont-elles partagées avec d'autres artisans ?</summary><p>Non. Les demandes viennent de vos propres campagnes et sont envoyées à vous seul. Et on n'accompagne qu'un artisan par zone.</p></details>
+  <details><summary>Qu'est-ce que je dois faire de mon côté ?</summary><p>Rappeler les demandes rapidement et réaliser les devis. La création des pubs, le ciblage et l'optimisation, c'est nous.</p></details>
+  <details><summary>Je n'ai jamais fait de pub Facebook, c'est un problème ?</summary><p>Non. On s'occupe de toute la partie technique et créative.</p></details>
+  <details><summary>Vous faites aussi le site internet ou Google ?</summary><p>Non. On se concentre sur une seule chose : les publicités Facebook &amp; Instagram qui génèrent des demandes de devis.</p></details>
+</div></section>
+
+<section class="alt" id="reserver"><div class="wrap">
+  <div class="head"><span class="eyebrow">Réserver</span><h2>Choisissez votre créneau de 30 min.</h2><p class="lead">Un appel pour voir si c'est pertinent pour votre entreprise. Si ce n'est pas le cas, vous saurez au moins comment fonctionnent vos concurrents.</p></div>
+  <div id="cal-embed"></div>
+  <div class="book" id="book-native">
+    <div class="card">
+      <div class="label" style="margin-top:0">1. Le jour</div>
+      <div class="days" id="days"></div>
+      <div class="label">2. L'heure</div>
+      <div class="slots" id="slots"></div>
+      <p class="note">Créneaux du lundi au vendredi, heure de Paris.</p>
+    </div>
+    <form class="card" id="bookForm" novalidate>
+      <div class="label" style="margin-top:0">3. Vos coordonnées</div>
+      <div class="chosen" id="chosen">Choisissez un jour et une heure.</div>
+      <input type="hidden" name="creneau" id="creneau">
+      <div class="row"><input name="nom" placeholder="Nom et prénom *" required autocomplete="name"><input name="entreprise" placeholder="Entreprise *" required autocomplete="organization"></div>
+      <div class="row"><input name="telephone" type="tel" placeholder="Téléphone *" required autocomplete="tel"><input name="email" type="email" placeholder="Email *" required autocomplete="email"></div>
+      <div class="row">
+        <select name="metier" required><option value="">Métier *</option><option>Climatisation / PAC</option><option>Cuisiniste</option><option>Menuiserie / fenêtres</option><option>Autre</option></select>
+        <input name="ville" placeholder="Ville / zone *" required>
+      </div>
+      <input class="hp" name="_honey" tabindex="-1" autocomplete="off">
+      <button class="btn" type="submit" id="bookBtn" disabled style="width:100%;justify-content:center">Réserver ce créneau</button>
+      <p class="note">On vous confirme le rendez-vous par email ou téléphone. Vos données servent uniquement à vous recontacter.</p>
+      <div class="ok" id="bookOk">C'est noté ! On vous confirme le créneau très vite.</div>
+      <div class="err" id="bookErr">L'envoi a échoué. Réessayez, ou écrivez-nous via le formulaire de contact.</div>
+    </form>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap" style="max-width:760px">
+  <div class="head"><span class="eyebrow">Contact</span><h2>Une question ? Écrivez-nous.</h2></div>
+  <form class="card" id="contactForm" novalidate>
+    <div class="row"><input name="nom" placeholder="Nom et prénom *" required autocomplete="name"><input name="entreprise" placeholder="Entreprise" autocomplete="organization"></div>
+    <div class="row"><input name="email" type="email" placeholder="Email *" required autocomplete="email"><input name="telephone" type="tel" placeholder="Téléphone" autocomplete="tel"></div>
+    <textarea name="message" placeholder="Votre message *" required></textarea>
+    <input class="hp" name="_honey" tabindex="-1" autocomplete="off">
+    <button class="btn" type="submit">Envoyer le message</button>
+    <div class="ok" id="contactOk">Message envoyé. On vous répond rapidement.</div>
+    <div class="err" id="contactErr">L'envoi a échoué. Réessayez dans un instant.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© <span id="y"></span> MS Agency · Publicité Facebook &amp; Instagram pour artisans</div>
+  <div><a href="mentions-legales.html">Mentions légales &amp; confidentialité</a></div>
+</div></footer>
+
+<script>
+// ---- Configuration ----
+// Adresse qui reçoit les réservations et messages (via FormSubmit, gratuit).
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/majdisatouri@gmail.com';
+// Lien d'intégration d'un agenda (Google Agenda « page de réservation », Cal.com…).
+// S'il est rempli, il remplace le sélecteur de créneaux intégré.
+const CALENDAR_EMBED_URL = '';
+const SLOTS = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
+const NB_DAYS = 10;
+
+document.getElementById('y').textContent = new Date().getFullYear();
+
+async function send(data, subject) {
+  data._subject = subject; data._template = 'table'; data._captcha = 'false';
+  const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || j.success === 'false' || j.success === false) throw new Error(j.message || r.status);
+}
+function bind(formId, okId, errId, subject, before) {
+  const f = document.getElementById(formId);
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!f.checkValidity()) { f.reportValidity(); return; }
+    const data = Object.fromEntries(new FormData(f));
+    if (data._honey) return;
+    delete data._honey;
+    if (before && !before(data)) return;
+    const btn = f.querySelector('button[type=submit]'), label = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Envoi…';
+    document.getElementById(errId).style.display = 'none';
+    try { await send(data, typeof subject === 'function' ? subject(data) : subject); f.reset(); document.getElementById(okId).style.display = 'block'; btn.textContent = 'Envoyé ✓'; }
+    catch (err) { document.getElementById(errId).style.display = 'block'; btn.disabled = false; btn.textContent = label; }
+  });
+}
+
+// ---- Réservation ----
+if (CALENDAR_EMBED_URL) {
+  document.getElementById('book-native').style.display = 'none';
+  document.getElementById('cal-embed').innerHTML = `<iframe class="cal" src="${CALENDAR_EMBED_URL}" title="Réserver un créneau"></iframe>`;
+} else {
+  const daysEl = document.getElementById('days'), slotsEl = document.getElementById('slots');
+  const chosen = document.getElementById('chosen'), hidden = document.getElementById('creneau'), btn = document.getElementById('bookBtn');
+  const fmtD = new Intl.DateTimeFormat('fr-FR', { weekday: 'short' }), fmtL = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+  let day = null, slot = null;
+  const now = new Date(), days = [];
+  for (let d = new Date(now); days.length < NB_DAYS; d.setDate(d.getDate() + 1)) {
+    const wd = d.getDay(); if (wd === 0 || wd === 6) continue;
+    days.push(new Date(d.getFullYear(), d.getMonth(), d.getDate()));
+  }
+  function slotOk(d, s) { const [h, m] = s.split(':'); const t = new Date(d); t.setHours(+h, +m); return t - now > 2 * 3600e3; }
+  function update() {
+    btn.disabled = !(day && slot);
+    if (day && slot) { const txt = `${fmtL.format(day)} à ${slot.replace(':00', 'h').replace(':', 'h')}`; chosen.textContent = '✓ ' + txt.charAt(0).toUpperCase() + txt.slice(1); hidden.value = txt; }
+    else chosen.textContent = day ? 'Choisissez une heure.' : 'Choisissez un jour et une heure.';
+  }
+  function renderSlots() {
+    slotsEl.innerHTML = '';
+    SLOTS.forEach(s => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'slot'; b.textContent = s.replace(':00', 'h').replace(':', 'h');
+      const ok = day && slotOk(day, s); b.disabled = !ok; if (!ok) b.style.opacity = .3;
+      b.setAttribute('aria-pressed', slot === s);
+      b.onclick = () => { slot = s; renderSlots(); update(); };
+      slotsEl.appendChild(b);
+    });
+  }
+  days.filter(d => SLOTS.some(s => slotOk(d, s))).forEach((d, i) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'day';
+    b.innerHTML = `<small>${fmtD.format(d).replace('.', '')}</small><b>${d.getDate()}</b>`;
+    b.setAttribute('aria-pressed', 'false');
+    b.onclick = () => { day = d; slot = null; daysEl.querySelectorAll('.day').forEach(x => x.setAttribute('aria-pressed', x === b)); renderSlots(); update(); };
+    daysEl.appendChild(b);
+  });
+  renderSlots();
+  bind('bookForm', 'bookOk', 'bookErr', d => `📅 Nouveau RDV : ${d.creneau} · ${d.entreprise}`, d => !!d.creneau);
+}
+bind('contactForm', 'contactOk', 'contactErr', '✉️ Nouveau message depuis le site MS Agency');
+</script>
+</body>
+</html>
