@@ -226,7 +226,7 @@ footer a{color:var(--mute)}
         <select name="metier" required><option value="">Métier *</option><option>Climatisation / PAC</option><option>Cuisiniste</option><option>Menuiserie / fenêtres</option><option>Autre</option></select>
         <input name="ville" placeholder="Ville / zone *" required>
       </div>
-      <input class="hp" name="_honey" tabindex="-1" autocomplete="off">
+      <input class="hp" name="botcheck" tabindex="-1" autocomplete="off">
       <button class="btn" type="submit" id="bookBtn" disabled style="width:100%;justify-content:center">Réserver ce créneau</button>
       <p class="note">On vous confirme le rendez-vous par email ou téléphone. Vos données servent uniquement à vous recontacter.</p>
       <div class="ok" id="bookOk">C'est noté ! On vous confirme le créneau très vite.</div>
@@ -241,7 +241,7 @@ footer a{color:var(--mute)}
     <div class="row"><input name="nom" placeholder="Nom et prénom *" required autocomplete="name"><input name="entreprise" placeholder="Entreprise" autocomplete="organization"></div>
     <div class="row"><input name="email" type="email" placeholder="Email *" required autocomplete="email"><input name="telephone" type="tel" placeholder="Téléphone" autocomplete="tel"></div>
     <textarea name="message" placeholder="Votre message *" required></textarea>
-    <input class="hp" name="_honey" tabindex="-1" autocomplete="off">
+    <input class="hp" name="botcheck" tabindex="-1" autocomplete="off">
     <button class="btn" type="submit">Envoyer le message</button>
     <div class="ok" id="contactOk">Message envoyé. On vous répond rapidement.</div>
     <div class="err" id="contactErr">L'envoi a échoué. Réessayez dans un instant.</div>
@@ -255,8 +255,9 @@ footer a{color:var(--mute)}
 
 <script>
 // ---- Configuration ----
-// Adresse qui reçoit les réservations et messages (via FormSubmit, gratuit).
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/95ae9e5b6eb69b5094aa38d6a9240e91';
+// Les réservations et messages sont envoyés par email via Web3Forms (gratuit).
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+const WEB3FORMS_KEY = 'WEB3FORMS_KEY_A_REMPLIR';
 // Lien d'intégration d'un agenda (Google Agenda « page de réservation », Cal.com…).
 // S'il est rempli, il remplace le sélecteur de créneaux intégré.
 const CALENDAR_EMBED_URL = '';
@@ -268,10 +269,10 @@ const FERIES = ['2026-11-01','2026-11-11','2026-12-25','2027-01-01','2027-03-29'
 document.getElementById('y').textContent = new Date().getFullYear();
 
 async function send(data, subject) {
-  data._subject = subject; data._template = 'table'; data._captcha = 'false';
-  const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+  const body = { access_key: WEB3FORMS_KEY, subject, from_name: 'Site MS Agency', ...data };
+  const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout(20000) });
   const j = await r.json().catch(() => ({}));
-  if (!r.ok || j.success === 'false' || j.success === false) throw new Error(j.message || r.status);
+  if (!r.ok || j.success !== true) throw new Error(j.message || r.status);
 }
 function bind(formId, okId, errId, subject, before) {
   const f = document.getElementById(formId);
@@ -279,8 +280,8 @@ function bind(formId, okId, errId, subject, before) {
     e.preventDefault();
     if (!f.checkValidity()) { f.reportValidity(); return; }
     const data = Object.fromEntries(new FormData(f));
-    if (data._honey) return;
-    delete data._honey;
+    if (data.botcheck) return;
+    delete data.botcheck;
     if (before && !before(data)) return;
     const btn = f.querySelector('button[type=submit]'), label = btn.textContent;
     btn.disabled = true; btn.textContent = 'Envoi…';
